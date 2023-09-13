@@ -27,7 +27,7 @@ const Body = () => {
       </div>
       <div>
         <p>Hi</p>
-        <img src= />
+        <img alt="Stuff"/>
       </div>
     </div>
   );
