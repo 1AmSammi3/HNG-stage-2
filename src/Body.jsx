@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Search from './assets/Search.svg';
+import Search from 'src/assets/Search.svg';
 
 const API_URL =
   "https://api.themoviedb.org/3/movie/top_rated?api_key=5305712a59ce49234a0aa2a117b38249";
