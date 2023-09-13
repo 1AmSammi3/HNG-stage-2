@@ -20,8 +20,7 @@ const Body = () => {
     <div>
       <div>
         <input
-        placeholder= "What do you want to watch" 
-        value= "Spiderman"
+        placeholder= "What do you want to watch"
         />
       </div>
       <div>
