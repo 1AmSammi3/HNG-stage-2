@@ -1,9 +1,12 @@
 import React from 'react';
-import Card from './Card';
 
 const Body = () => {
   return(
-    <Card />
+    <div>
+      <div>
+        
+      </div>
+    </div>
   );
 }
 
