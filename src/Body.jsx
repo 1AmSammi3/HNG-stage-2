@@ -63,7 +63,9 @@ const Body = ({link}) => {
      </div>
      <div>
         <img 
-        src={test.backdrop_path} height="100px" width="70px" onError={handleImageError}/>
+        src={test.backdrop_path !== 'N/A' ? test.backdrop_path :
+        handleImageError} height="100px" width="70px"
+        onError={handleImageError}/>
         <div>
           <div>USA {test.release_date}</div>
           <h1>{test.title}</h1>
