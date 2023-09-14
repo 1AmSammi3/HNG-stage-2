@@ -24,9 +24,6 @@ const test = {
 const link = test.backdrop_path;
 
 const Body = ({link}) => {
-  
-  const [movieData, setMovieData] = useState(null);
-  const [genres, setGenres] = useState([]);
 
 const getYearFromDate = (dateString) => {
   const date = new Date(dateString);
@@ -42,25 +39,19 @@ const getYearFromDate = (dateString) => {
   </svg>
 );
   
-    useEffect(() => {
-    fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=YOUR_API_KEY")
-      .then((response) => response.json())
-      .then((data) => {
-        const genreMap = {};
-        data.genres.forEach((genre) => {
-          genreMap[genre.id] = genre.name;
-        });
-        setGenres(genreMap);
-        
-        return fetch(API_URL);
-      })
-      .then((response) => response.json())
-      .then((data) => {
-        setMovieData(data.results);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+  const searchMovies = async (title) => {
+    const response = await fetch(`${API_URL}&s=${title}`);
+    const data = await response.json();
+
+    console.log(data.results);
+  }
+  
+  const handleImageError = (event) => {
+    event.target.src = "https://via.placeholder.com/400"
+  }
+
+  useEffect(() => {
+    searchMovies('Spiderman');
   }, []);
 
   return (
@@ -83,7 +74,6 @@ const getYearFromDate = (dateString) => {
         <div>
           <div>USA {getYearFromDate(test.release_date)}</div>
           <h1>{test.title}</h1>
-          <p>Genres: {test.genre_ids.map((genreId) => genres[genreId]).join(", ")}</p>
         </div>
      </div>
     </div>
