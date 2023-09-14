@@ -56,6 +56,13 @@ const Body = () => {
         <p>Hi</p>
         <img alt="Stuff" />
      </div>
+     <div>
+        <img src={test.backdrop_path}/>
+        <div>
+          <div>USA {test.release_date}</div>
+          <h1>{test.title}</h1>
+        </div>
+     </div>
     </div>
   );
 }
