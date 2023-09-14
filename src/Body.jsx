@@ -65,7 +65,7 @@ const Body = ({link}) => {
         (
           </div>
              {movies.map((final) => (
-               <MovieCard test = {test}/>
+               <MovieCard final = {final}/>
                ))}
           </div>
         ) : (
