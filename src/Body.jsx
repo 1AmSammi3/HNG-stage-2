@@ -70,7 +70,7 @@ const Body = ({link}) => {
           </div>
         ) : (
         <div>
-          <h1>No movies found<h1/>
+          <h1>No movies found</h1>
         </div>
         )
       }
