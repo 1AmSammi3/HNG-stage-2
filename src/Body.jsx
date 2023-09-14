@@ -28,16 +28,7 @@ const Body = ({link}) => {
   
   const [movies, setMovies] = useState([]);
   
-  const [searchTerm, setSearchTerm] = useState('')
-
-  const search = (
-   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <path d="M14 14L10 10M11.3333 6.66667C11.3333 9.244 9.244 11.3333 6.66667
-     11.3333C4.08934 11.3333 2 9.244 2 6.66667C2 4.08934 4.08934 2 6.66667
-     2C9.244 2 11.3333 4.08934 11.3333 6.66667Z" stroke="black" strokeWidth="2"
-     strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
+  const [searchTerm, setSearchTerm] = useState('');
   
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
@@ -53,6 +44,15 @@ const Body = ({link}) => {
   useEffect(() => {
     searchMovies('Spiderman');
   }, []);
+  
+  const search = (
+   <svg width="16" height="16" onClick={() => searchMovies(searchTerm)} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+     <path d="M14 14L10 10M11.3333 6.66667C11.3333 9.244 9.244 11.3333 6.66667
+     11.3333C4.08934 11.3333 2 9.244 2 6.66667C2 4.08934 4.08934 2 6.66667
+     2C9.244 2 11.3333 4.08934 11.3333 6.66667Z" stroke="black" strokeWidth="2"
+     strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
 
   return (
   <div>
@@ -62,10 +62,7 @@ const Body = ({link}) => {
         value= {searchTerm}
         onChange = {(e) => setSearchTerm(e.target.value)}
       />
-      <img 
-        src={search}
-        onClick={() => searchMovies(searchTerm)}
-      />
+      {search}
     </div>
     {
       movies?.length > 0 ? 
