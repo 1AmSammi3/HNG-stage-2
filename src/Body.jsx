@@ -62,7 +62,10 @@ const Body = ({link}) => {
         value= {searchTerm}
         onChange = {(e) => setSearchTerm(e.target.value)}
       />
-      {search onclick={() searchMovies(searchTerm)}}
+      <img 
+        src={search}
+        onClick={() searchMovies(searchTerm)}
+      />
     </div>
     {
       movies?.length > 0 ? 
