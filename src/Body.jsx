@@ -64,7 +64,9 @@ const Body = ({link}) => {
         movies?.length > 0 ? 
         (
           </div>
-             <MovieCard test = {test}/>
+             {movies.map((final) => (
+               <MovieCard test = {test}/>
+               ))}
           </div>
         ) : (
         </div>
