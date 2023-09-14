@@ -40,8 +40,8 @@ const Body = () => {
     console.log(data.results);
   }
   
-  const handleImageError = (e) => {
-    e.target.src = "https://via.placeholder.com/400"
+  const handleImageError = (event) => {
+    event.target.src = "https://via.placeholder.com/400"
   }
 
   useEffect(() => {
@@ -62,10 +62,7 @@ const Body = () => {
      </div>
      <div>
         <img 
-        src={test.backdrop_path} 
-        height="100px" 
-        width="70px" 
-        onError={handleImageError}/>
+        src={test.backdrop_path} height="100px" width="70px" onError={handleImageError}/>
         <div>
           <div>USA {test.release_date}</div>
           <h1>{test.title}</h1>
