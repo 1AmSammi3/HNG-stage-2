@@ -75,8 +75,7 @@ const Body = ({link}) => {
         )
       }
     </div
-    
-  );
+  )
 }
 
 export default Body;
