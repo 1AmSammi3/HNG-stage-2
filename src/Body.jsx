@@ -49,7 +49,7 @@ const Body = ({link}) => {
   }
 
   useEffect(() => {
-    searchMovies('Spiderman');
+    searchMovies('Barbie');
   }, []);
 
   return (
