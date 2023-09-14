@@ -21,8 +21,9 @@ const test = {
     "vote_average": 8.7,
     "vote_count": 18617
 }
+const link = test.backdrop_path;
 
-const Body = ({test.backdrop_path}) => {
+const Body = ({link}) => {
 
   const search = (
    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
