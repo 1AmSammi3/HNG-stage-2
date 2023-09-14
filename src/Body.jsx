@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MovieCard from "./MovieCard";
 
-const API_URL = "https://api.themovedb.org/3/search/movie?api_key=5305712a59ce49234a0aa2a117b38249";
+const API_URL = "https://api.themoviedb.org/3/search/movie?api_key=5305712a59ce49234a0aa2a117b38249";
 
 const test = {
     "adult": false,
