@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Search from './assets/Search.svg';
 
 const API_URL = "https://api.themoviedb.org/3/movie/top_rated?api_key=5305712a59ce49234a0aa2a117b38249";
 
@@ -28,12 +27,12 @@ const Body = () => {
         <input
           placeholder="What do you want to watch"
         />
-        <img src={search} alt="search" />
+        {search};
       </div>
       <div>
         <p>Hi</p>
         <img alt="Stuff" />
-      </div>
+     </div>
     </div>
   );
 }
