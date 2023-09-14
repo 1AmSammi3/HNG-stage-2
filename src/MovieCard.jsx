@@ -1,5 +1,10 @@
 import React from "react";
 
+const getYearFromDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.getFullYear();
+};
+
 const MovieCard = ({test}) => {
   return(
     <div>
