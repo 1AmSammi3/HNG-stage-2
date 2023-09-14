@@ -9,7 +9,8 @@ const MovieCard = ({final}) => {
   return(
     <div>
         <img 
-        src="https://image.tmdb.org/t/p/w500/${final.poster_path}" height="100px" width="70px"
+        src={`https://image.tmdb.org/t/p/original/${final.backdrop_path}`}
+        height="100px" width="70px"
         />
         <div>
           <div>USA {getYearFromDate(final.release_date)}</div>
