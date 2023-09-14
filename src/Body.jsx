@@ -66,7 +66,7 @@ const getYearFromDate = (dateString) => {
         <p>Hi</p>
         <img alt="Stuff" />
      </div>
-     <MovieCard />
+     <MovieCard test = {test}/>
     </div>
   );
 }
