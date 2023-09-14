@@ -25,6 +25,8 @@ const test = {
 const link = test.backdrop_path;
 
 const Body = ({link}) => {
+  
+  const [movies, setMovies] = useState([]);
 
   const search = (
    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +41,7 @@ const Body = ({link}) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
 
-    console.log(data.results);
+    setMovies(data.results);
   }
   
   const handleImageError = (event) => {
@@ -58,12 +60,20 @@ const Body = ({link}) => {
         />
         {search}
       </div>
-      <div>
-        <p>Hi</p>
-        <img alt="Stuff" />
-     </div>
-     <MovieCard test = {test}/>
-    </div>
+      {
+        movies?.length > 0 ? 
+        (
+          </div>
+             <MovieCard test = {test}/>
+          </div>
+        ) : (
+        </div>
+          <h1>No movies found<h1/>
+        </div>
+        )
+      }
+    </div
+    
   );
 }
 
