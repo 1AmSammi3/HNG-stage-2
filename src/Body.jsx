@@ -53,29 +53,29 @@ const Body = ({link}) => {
   }, []);
 
   return (
+  <div>
     <div>
-      <div>
-        <input
-          placeholder="What do you want to watch"
-        />
-        {search}
-      </div>
-      {
-        movies?.length > 0 ? 
-        (
-          <div>
-             {movies.map((final) => (
-               <MovieCard final = {final}/>
-               ))}
-          </div>
-        ) : (
+      <input
+        placeholder="What do you want to watch"
+      />
+      {search}
+    </div>
+    {
+      movies?.length > 0 ? 
+      (
+        <div>
+           {movies.map((final) => (
+             <MovieCard final={final} />
+           ))}
+        </div>
+      ) : (
         <div>
           <h1>No movies found</h1>
         </div>
-        )
-      }
-    </div
-  )
-}
+      )
+    }
+  </div>
+);
+
 
 export default Body;
