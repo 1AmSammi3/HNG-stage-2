@@ -27,7 +27,7 @@ const Body = () => {
         <input
           placeholder="What do you want to watch"
         />
-        {search};
+        {search}
       </div>
       <div>
         <p>Hi</p>
