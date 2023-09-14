@@ -67,7 +67,7 @@ const Body = ({link}) => {
         handleImageError} height="100px" width="70px"
         />
         <div>
-          <div>USA {test.release_date}</div>
+          <div>USA {getDate(test.release_date)}</div>
           <h1>{test.title}</h1>
         </div>
      </div>
