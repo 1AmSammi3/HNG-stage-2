@@ -4,8 +4,6 @@ import MovieCard from "./MovieCard";
 const API_URL =
 "https://api.themoviedb.org/3/movie/popular?api_key=5305712a59ce49234a0aa2a117b38249";
 
-const link = test.backdrop_path;
-
 const Body = ({link}) => {
   
   const [movies, setMovies] = useState([]);
