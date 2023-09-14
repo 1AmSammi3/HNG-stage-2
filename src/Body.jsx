@@ -57,7 +57,8 @@ const Body = () => {
         <img alt="Stuff" />
      </div>
      <div>
-        <img src={test.backdrop_path}/>
+        <img src={test.backdrop_path != 'N/A' ? test.backdrop_path :
+        'https://via.placeholder.com/400'} height="100px" width="70px"/>
         <div>
           <div>USA {test.release_date}</div>
           <h1>{test.title}</h1>
