@@ -64,7 +64,7 @@ const Body = ({link}) => {
       />
       <img 
         src={search}
-        onClick={() searchMovies(searchTerm)}
+        onClick={() => searchMovies(searchTerm)}
       />
     </div>
     {
