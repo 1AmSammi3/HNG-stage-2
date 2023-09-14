@@ -26,11 +26,6 @@ const link = test.backdrop_path;
 
 const Body = ({link}) => {
 
-const getYearFromDate = (dateString) => {
-  const date = new Date(dateString);
-  return date.getFullYear();
-};
-
   const search = (
    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
      <path d="M14 14L10 10M11.3333 6.66667C11.3333 9.244 9.244 11.3333 6.66667
