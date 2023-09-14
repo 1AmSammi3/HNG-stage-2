@@ -2,6 +2,26 @@ import React, { useEffect } from 'react';
 
 const API_URL = "https://api.themoviedb.org/3/movie/top_rated?api_key=5305712a59ce49234a0aa2a117b38249";
 
+const test = {
+    "adult": false,
+    "backdrop_path": "/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
+    "genre_ids": [
+        18,
+        80
+    ],
+    "id": 238,
+    "original_language": "en",
+    "original_title": "The Godfather",
+    "overview": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+    "popularity": 111.417,
+    "poster_path": "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    "release_date": "1972-03-14",
+    "title": "The Godfather",
+    "video": false,
+    "vote_average": 8.7,
+    "vote_count": 18617
+}
+
 const Body = () => {
 
   const search = (
