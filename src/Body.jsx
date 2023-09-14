@@ -69,7 +69,7 @@ const Body = ({link}) => {
                ))}
           </div>
         ) : (
-        </div>
+        <div>
           <h1>No movies found<h1/>
         </div>
         )
