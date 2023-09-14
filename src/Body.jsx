@@ -39,6 +39,10 @@ const Body = () => {
 
     console.log(data.results);
   }
+  
+  const handleImageError = (e) => {
+    e.target.src = "https://via.placeholder.com/400"
+  }
 
   useEffect(() => {
     searchMovies('Spiderman');
@@ -57,8 +61,11 @@ const Body = () => {
         <img alt="Stuff" />
      </div>
      <div>
-        <img src={test.backdrop_path !== 'N/A' ? test.backdrop_path :
-        'https://via.placeholder.com/400'} height="100px" width="70px"/>
+        <img 
+        src={test.backdrop_path} 
+        height="100px" 
+        width="70px" 
+        onError={handleImageError}/>
         <div>
           <div>USA {test.release_date}</div>
           <h1>{test.title}</h1>
